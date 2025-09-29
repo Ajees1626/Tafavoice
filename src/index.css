@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-primary-50 via-white to-secondary-50 text-gray-900 font-rotex;
+  }
+  
+  * {
+    @apply border-gray-200;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 shadow-lg hover:shadow-primary-500/25 transform hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-gradient-to-r from-secondary-500 to-secondary-600 hover:from-secondary-600 hover:to-secondary-700 text-white border-0 px-6 py-3 rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2 shadow-lg hover:shadow-secondary-500/25 transform hover:scale-105;
+  }
+  
+  .btn-accent {
+    @apply bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 shadow-lg hover:shadow-accent-500/25 transform hover:scale-105;
+  }
+  
+  .btn-success {
+    @apply bg-gradient-to-r from-success-500 to-success-600 hover:from-success-600 hover:to-success-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-success-500 focus:ring-offset-2 shadow-lg hover:shadow-success-500/25 transform hover:scale-105;
+  }
+  
+  .btn-warning {
+    @apply bg-gradient-to-r from-warning-500 to-warning-600 hover:from-warning-600 hover:to-warning-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-warning-500 focus:ring-offset-2 shadow-lg hover:shadow-warning-500/25 transform hover:scale-105;
+  }
+  
+  .btn-info {
+    @apply bg-gradient-to-r from-info-500 to-info-600 hover:from-info-600 hover:to-info-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-info-500 focus:ring-offset-2 shadow-lg hover:shadow-info-500/25 transform hover:scale-105;
+  }
+  
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+
+  /* Colorful card styles */
+  .card-primary {
+    @apply bg-gradient-to-br from-primary-50 to-primary-100 border border-primary-200 rounded-2xl shadow-lg hover:shadow-primary-500/20 transition-all duration-300;
+  }
+  
+  .card-secondary {
+    @apply bg-gradient-to-br from-secondary-50 to-secondary-100 border border-secondary-200 rounded-2xl shadow-lg hover:shadow-secondary-500/20 transition-all duration-300;
+  }
+  
+  .card-accent {
+    @apply bg-gradient-to-br from-accent-50 to-accent-100 border border-accent-200 rounded-2xl shadow-lg hover:shadow-accent-500/20 transition-all duration-300;
+  }
+  
+  .card-success {
+    @apply bg-gradient-to-br from-success-50 to-success-100 border border-success-200 rounded-2xl shadow-lg hover:shadow-success-500/20 transition-all duration-300;
+  }
+  
+  .card-warning {
+    @apply bg-gradient-to-br from-warning-50 to-warning-100 border border-warning-200 rounded-2xl shadow-lg hover:shadow-warning-500/20 transition-all duration-300;
+  }
+  
+  .card-info {
+    @apply bg-gradient-to-br from-info-50 to-info-100 border border-info-200 rounded-2xl shadow-lg hover:shadow-info-500/20 transition-all duration-300;
+  }
+
+  /* Font utility classes - removed to avoid circular dependency */
+}
