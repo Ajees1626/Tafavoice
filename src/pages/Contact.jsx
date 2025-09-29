@@ -4,12 +4,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SEO from '../components/SEO';
 import { SITE_CONFIG } from '../utils/constants';
 import { fadeInUp, fadeInLeft, fadeInRight } from '../utils/animations';
-import { ContactForm } from '../types';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Contact: React.FC = () => {
-  const [formData, setFormData] = useState<ContactForm>({
+const Contact = () => {
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
@@ -18,11 +17,11 @@ const Contact: React.FC = () => {
     timeline: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState('idle');
 
-  const heroRef = useRef<HTMLDivElement>(null);
-  const formRef = useRef<HTMLDivElement>(null);
-  const infoRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef(null);
+  const formRef = useRef(null);
+  const infoRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -43,7 +42,7 @@ const Contact: React.FC = () => {
     return () => ctx.revert();
   }, []);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -51,7 +50,7 @@ const Contact: React.FC = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');

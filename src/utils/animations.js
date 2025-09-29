@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 
-export const fadeInUp = (element: string | Element, delay = 0) => {
+export const fadeInUp = (element, delay = 0) => {
   return gsap.fromTo(
     element,
     {
@@ -27,7 +27,7 @@ export const fadeInUp = (element: string | Element, delay = 0) => {
   );
 };
 
-export const fadeInLeft = (element: string | Element, delay = 0) => {
+export const fadeInLeft = (element, delay = 0) => {
   return gsap.fromTo(
     element,
     {
@@ -50,7 +50,7 @@ export const fadeInLeft = (element: string | Element, delay = 0) => {
   );
 };
 
-export const fadeInRight = (element: string | Element, delay = 0) => {
+export const fadeInRight = (element, delay = 0) => {
   return gsap.fromTo(
     element,
     {
@@ -73,7 +73,7 @@ export const fadeInRight = (element: string | Element, delay = 0) => {
   );
 };
 
-export const staggerChildren = (parent: string | Element, children: string, delay = 0.1) => {
+export const staggerChildren = (parent, children, delay = 0.1) => {
   return gsap.fromTo(
     children,
     {
@@ -96,7 +96,7 @@ export const staggerChildren = (parent: string | Element, children: string, dela
   );
 };
 
-export const scaleIn = (element: string | Element, delay = 0) => {
+export const scaleIn = (element, delay = 0) => {
   return gsap.fromTo(
     element,
     {
@@ -119,7 +119,7 @@ export const scaleIn = (element: string | Element, delay = 0) => {
   );
 };
 
-export const parallaxScroll = (element: string | Element, speed = 0.5) => {
+export const parallaxScroll = (element, speed = 0.5) => {
   return gsap.to(element, {
     yPercent: -50 * speed,
     ease: 'none',
@@ -132,11 +132,11 @@ export const parallaxScroll = (element: string | Element, speed = 0.5) => {
   });
 };
 
-export const textReveal = (element: string | Element) => {
+export const textReveal = (element) => {
   const text = gsap.utils.toArray(element);
   
-  text.forEach((line: any) => {
-    const split = new (window as any).SplitText(line, { type: 'lines' });
+  text.forEach((line) => {
+    const split = new window.SplitText(line, { type: 'lines' });
     
     gsap.fromTo(
       split.lines,
@@ -161,7 +161,7 @@ export const textReveal = (element: string | Element) => {
   });
 };
 
-export const heroAnimation = (element: string | Element) => {
+export const heroAnimation = (element) => {
   const tl = gsap.timeline();
   
   tl.fromTo(
@@ -181,7 +181,7 @@ export const heroAnimation = (element: string | Element) => {
   return tl;
 };
 
-export const smoothScrollTo = (target: string | Element, offset = 0) => {
+export const smoothScrollTo = (target, offset = 0) => {
   gsap.to(window, {
     duration: 1.5,
     scrollTo: {

@@ -7,11 +7,11 @@ import { fadeInUp, fadeInLeft, fadeInRight, staggerChildren } from '../utils/ani
 
 gsap.registerPlugin(ScrollTrigger);
 
-const About: React.FC = () => {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const storyRef = useRef<HTMLDivElement>(null);
-  const skillsRef = useRef<HTMLDivElement>(null);
-  const valuesRef = useRef<HTMLDivElement>(null);
+const About = () => {
+  const heroRef = useRef(null);
+  const storyRef = useRef(null);
+  const skillsRef = useRef(null);
+  const valuesRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -244,3 +244,4 @@ const About: React.FC = () => {
 };
 
 export default About;
+

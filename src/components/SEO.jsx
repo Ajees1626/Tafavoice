@@ -1,13 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { SEOData } from '../types';
 import { SITE_CONFIG } from '../utils/constants';
 
-interface SEOProps {
-  data: SEOData;
-}
-
-const SEO: React.FC<SEOProps> = ({ data }) => {
+const SEO = ({ data }) => {
   const {
     title,
     description,

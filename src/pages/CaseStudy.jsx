@@ -8,10 +8,10 @@ import { fadeInUp, fadeInLeft, fadeInRight, staggerChildren } from '../utils/ani
 
 gsap.registerPlugin(ScrollTrigger);
 
-const CaseStudy: React.FC = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const heroRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
+const CaseStudy = () => {
+  const { slug } = useParams();
+  const heroRef = useRef(null);
+  const contentRef = useRef(null);
 
   const project = PROJECTS.find(p => p.caseStudy === slug);
 

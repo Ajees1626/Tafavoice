@@ -11,7 +11,7 @@ export const scrollToTop = () => {
   });
 };
 
-export const scrollToElement = (element: string | Element, offset = 0) => {
+export const scrollToElement = (element, offset = 0) => {
   gsap.to(window, {
     duration: 1.5,
     scrollTo: {

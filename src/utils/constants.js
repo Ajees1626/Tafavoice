@@ -21,7 +21,7 @@ export const NAVIGATION = [
 
 export const SKILLS = [
   'React',
-  'TypeScript',
+  'JavaScript',
   'Next.js',
   'Node.js',
   'Python',

@@ -4,8 +4,8 @@ import { gsap } from 'gsap';
 import SEO from '../components/SEO';
 import { fadeInUp } from '../utils/animations';
 
-const NotFound: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
+const NotFound = () => {
+  const containerRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {

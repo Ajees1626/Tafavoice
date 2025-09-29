@@ -8,11 +8,11 @@ import { fadeInUp, fadeInLeft, fadeInRight, staggerChildren, scaleIn } from '../
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Home: React.FC = () => {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const servicesRef = useRef<HTMLDivElement>(null);
-  const projectsRef = useRef<HTMLDivElement>(null);
-  const testimonialsRef = useRef<HTMLDivElement>(null);
+const Home = () => {
+  const heroRef = useRef(null);
+  const servicesRef = useRef(null);
+  const projectsRef = useRef(null);
+  const testimonialsRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -339,3 +339,4 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+

@@ -1,24 +1,17 @@
 import { useEffect, useRef, useState } from 'react';
 
-interface UseIntersectionObserverProps {
-  threshold?: number;
-  root?: Element | null;
-  rootMargin?: string;
-  freezeOnceVisible?: boolean;
-}
-
 export const useIntersectionObserver = ({
   threshold = 0,
   root = null,
   rootMargin = '0%',
   freezeOnceVisible = false,
-}: UseIntersectionObserverProps = {}) => {
-  const [entry, setEntry] = useState<IntersectionObserverEntry>();
-  const [node, setNode] = useState<Element | null>(null);
+} = {}) => {
+  const [entry, setEntry] = useState();
+  const [node, setNode] = useState(null);
 
   const frozen = entry?.isIntersecting && freezeOnceVisible;
 
-  const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
+  const updateEntry = ([entry]) => {
     setEntry(entry);
   };
 
@@ -35,6 +28,6 @@ export const useIntersectionObserver = ({
     return () => observer.disconnect();
   }, [node, threshold, root, rootMargin, frozen]);
 
-  return [setNode, entry] as const;
+  return [setNode, entry];
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { SITE_CONFIG } from '../utils/constants';
 
-const Footer: React.FC = () => {
+const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -139,3 +139,4 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+

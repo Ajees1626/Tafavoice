@@ -8,9 +8,9 @@ import { fadeInUp, staggerChildren } from '../utils/animations';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Projects: React.FC = () => {
+const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const projectsRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef(null);
 
   const categories = ['All', ...Array.from(new Set(PROJECTS.map(project => project.category)))];
 
